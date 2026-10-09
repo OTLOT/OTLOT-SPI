@@ -1,0 +1,119 @@
+Time resolution is 1 ps
+
+================================================================
+ SPI MASTER CONTROLLER - SELF CHECKING TESTBENCH
+================================================================
+
+--- TEST 1 : Reset Test ---
+[95000] PASS : TEST1 : cs_n high during reset
+[95000] PASS : TEST1 : busy low during reset
+[95000] PASS : TEST1 : done low during reset
+[95000] PASS : TEST1 : sclk = CPOL during reset
+[95000] PASS : TEST1 : rx_data cleared
+[95000] PASS : TEST1 : mosi low
+  -> reset released
+
+--- TEST 2 : SPI Mode 0 (CPOL=0, CPHA=0) ---
+[865000] PASS : TEST2 : Mode 0 8'hA5 <-> 8'h3C
+
+--- TEST 3 : SPI Mode 1 (CPOL=0, CPHA=1) ---
+[1585000] PASS : TEST3 : Mode 1 8'h5A <-> 8'hC3
+
+--- TEST 4 : SPI Mode 2 (CPOL=1, CPHA=0) ---
+[2305000] PASS : TEST4 : Mode 2 8'hFF <-> 8'h00
+
+--- TEST 5 : SPI Mode 3 (CPOL=1, CPHA=1) ---
+[3025000] PASS : TEST5 : Mode 3 8'h0F <-> 8'hF0
+
+--- TEST 6 : Back-to-Back Transfers (8 x Mode 0) ---
+[3745000] PASS : TEST6 : back-to-back #0 tx=00 rx=f0
+[4465000] PASS : TEST6 : back-to-back #1 tx=11 rx=f1
+[5185000] PASS : TEST6 : back-to-back #2 tx=22 rx=f2
+[5905000] PASS : TEST6 : back-to-back #3 tx=33 rx=f3
+[6625000] PASS : TEST6 : back-to-back #4 tx=44 rx=f4
+[7345000] PASS : TEST6 : back-to-back #5 tx=55 rx=f5
+[8065000] PASS : TEST6 : back-to-back #6 tx=66 rx=f6
+[8785000] PASS : TEST6 : back-to-back #7 tx=77 rx=f7
+
+--- TEST 7 : Random Data / Mode / Divider Transfers ---
+[9825000] PASS : TEST7 : rand #0 mode=1 div=6 tx=21 rx=ac
+[10225000] PASS : TEST7 : rand #1 mode=3 div=2 tx=16 rx=e0
+[11265000] PASS : TEST7 : rand #2 mode=2 div=6 tx=8c rx=06
+[11825000] PASS : TEST7 : rand #3 mode=3 div=3 tx=e7 rx=4e
+[13025000] PASS : TEST7 : rand #4 mode=0 div=7 tx=55 rx=ff
+[14385000] PASS : TEST7 : rand #5 mode=2 div=8 tx=4d rx=f0
+[15585000] PASS : TEST7 : rand #6 mode=0 div=7 tx=ef rx=c5
+[16945000] PASS : TEST7 : rand #7 mode=0 div=8 tx=b5 rx=8e
+[17345000] PASS : TEST7 : rand #8 mode=1 div=2 tx=53 rx=bd
+[18385000] PASS : TEST7 : rand #9 mode=3 div=6 tx=4b rx=c0
+[18625000] PASS : TEST7 : rand #10 mode=1 div=1 tx=7d rx=8e
+[18865000] PASS : TEST7 : rand #11 mode=0 div=1 tx=4e rx=55
+[19905000] PASS : TEST7 : rand #12 mode=2 div=6 tx=e4 rx=10
+[21105000] PASS : TEST7 : rand #13 mode=1 div=7 tx=65 rx=fd
+[21985000] PASS : TEST7 : rand #14 mode=2 div=5 tx=0d rx=93
+[22865000] PASS : TEST7 : rand #15 mode=1 div=5 tx=90 rx=7a
+[23105000] PASS : TEST7 : rand #16 mode=2 div=1 tx=0e rx=38
+[23985000] PASS : TEST7 : rand #17 mode=0 div=5 tx=b2 rx=cc
+[25345000] PASS : TEST7 : rand #18 mode=2 div=8 tx=04 rx=4c
+[26705000] PASS : TEST7 : rand #19 mode=0 div=8 tx=18 rx=9b
+[27265000] PASS : TEST7 : rand #20 mode=3 div=3 tx=e7 rx=d6
+[27985000] PASS : TEST7 : rand #21 mode=0 div=4 tx=71 rx=49
+[29345000] PASS : TEST7 : rand #22 mode=0 div=8 tx=1f rx=ed
+[29585000] PASS : TEST7 : rand #23 mode=2 div=1 tx=37 rx=72
+
+--- TEST 8 : Clock Divider Variations ---
+[29825000] PASS : TEST8 : clk_divider = 1
+[30225000] PASS : TEST8 : clk_divider = 2
+[30785000] PASS : TEST8 : clk_divider = 3
+[31505000] PASS : TEST8 : clk_divider = 4
+[32865000] PASS : TEST8 : clk_divider = 8
+[35505000] PASS : TEST8 : clk_divider = 16
+[45825000] PASS : TEST8 : clk_divider = 64
+[66385000] PASS : TEST8 : clk_divider = 128
+
+--- TEST 9 : 8-bit Transfers (all 4 modes) ---
+[67105000] PASS : TEST9 : 8-bit Mode 0
+[67825000] PASS : TEST9 : 8-bit Mode 1
+[68545000] PASS : TEST9 : 8-bit Mode 2
+[69265000] PASS : TEST9 : 8-bit Mode 3
+
+--- TEST 10 : 16-bit Transfers (all 4 modes) ---
+[70625000] PASS : TEST10 : 16-bit Mode 0
+[71985000] PASS : TEST10 : 16-bit Mode 1
+[73345000] PASS : TEST10 : 16-bit Mode 2
+[74705000] PASS : TEST10 : 16-bit Mode 3
+
+--- TEST 11 : 32-bit Transfers (all 4 modes) ---
+[77345000] PASS : TEST11 : 32-bit Mode 0
+[79985000] PASS : TEST11 : 32-bit Mode 1
+[82625000] PASS : TEST11 : 32-bit Mode 2
+[85265000] PASS : TEST11 : 32-bit Mode 3
+
+--- EXTRA : Walk-1 / Walk-0 patterns ---
+[85985000] PASS : EXTRA : walk-1 bit 0
+[86705000] PASS : EXTRA : walk-1 bit 1
+[87425000] PASS : EXTRA : walk-1 bit 2
+[88145000] PASS : EXTRA : walk-1 bit 3
+[88865000] PASS : EXTRA : walk-1 bit 4
+[89585000] PASS : EXTRA : walk-1 bit 5
+[90305000] PASS : EXTRA : walk-1 bit 6
+[91025000] PASS : EXTRA : walk-1 bit 7
+
+================================================================
+ FUNCTIONAL COVERAGE
+================================================================
+ Overall coverage = 87.50 %
+  mode coverage    = 100.00 %
+  divider coverage = 100.00 %
+  width coverage   = 100.00 %
+  data coverage    = 50.00 %
+
+================================================================
+ TEST SUMMARY
+================================================================
+  PASSED : 70
+  FAILED : 0
+  RESULT : *** ALL TESTS PASSED ***
+================================================================
+
+$finish called at time : 91025 ns : File "C:/Users/arjun/Downloads/OTLOT-SPI/OTLOT-SPI.srcs/sim_1/new/spi_master_tb.sv" Line 508

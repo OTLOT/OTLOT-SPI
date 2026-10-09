@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../OTLOT-SPI.srcs/sources_1/new/spi_clock_generator.v" \
+"../../../../OTLOT-SPI.srcs/sources_1/new/spi_fsm.v" \
+"../../../../OTLOT-SPI.srcs/sources_1/new/spi_master_controller.v" \
+"../../../../OTLOT-SPI.srcs/sources_1/new/spi_master_top.v" \
+"../../../../OTLOT-SPI.srcs/sources_1/new/spi_shift_register.v" \
+
+sv xil_defaultlib  \
+"../../../../OTLOT-SPI.srcs/sim_1/new/spi_master_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

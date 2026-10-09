@@ -1,0 +1,7 @@
+Running: xsim.dir/spi_master_tb_behav/xsimk.exe -simmode gui -wdb spi_master_tb_behav.wdb -simrunnum 0 -socket 49237
+Design successfully loaded
+Design Loading Memory Usage: 29104 KB (Peak: 29104 KB)
+Design Loading CPU Usage: 609 ms
+Simulation completed
+Simulation Memory Usage: 32508 KB (Peak: 32508 KB)
+Simulation CPU Usage: 718 ms

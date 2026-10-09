@@ -1,4 +1,3 @@
-
 # SPI Master Controller — RTL + Verification Project
 
 A parameterized SPI Master Controller implemented in Verilog-2001, with a SystemVerilog verification environment and implementation support for FPGA and ASIC design flows.
